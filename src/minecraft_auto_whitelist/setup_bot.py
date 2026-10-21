@@ -1,11 +1,11 @@
-from env_dict import EnvDict
-from discord.message import Message
 from logging import getLogger
 
 from discord import Intents
 from discord.ext.commands import Bot
+from discord.message import Message
 
-from minecraft_rcon import add_user_to_whitelist
+from .env_dict import EnvDict
+from .minecraft_rcon import add_user_to_whitelist
 
 logger = getLogger()
 

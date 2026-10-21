@@ -3,7 +3,7 @@ from os import getenv
 
 from dotenv import load_dotenv
 
-from env_dict import EnvDict
+from .env_dict import EnvDict
 
 logger = getLogger()
 load_dotenv()

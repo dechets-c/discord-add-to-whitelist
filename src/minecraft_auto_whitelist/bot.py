@@ -1,8 +1,8 @@
 import argparse
 from logging import DEBUG, basicConfig, getLevelName, getLogger
 
-from load_env import get_config
-from setup_bot import get_bot
+from .load_env import get_config
+from .setup_bot import get_bot
 
 logger = getLogger()
 

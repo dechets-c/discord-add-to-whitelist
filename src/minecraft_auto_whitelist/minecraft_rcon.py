@@ -1,8 +1,9 @@
 from logging import getLogger
 
 from discord import Message
-from env_dict import EnvDict
 from mcrcon import MCRcon
+
+from .env_dict import EnvDict
 
 logger = getLogger()
 
