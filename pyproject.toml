@@ -1,7 +1,7 @@
 [project]
 name = "minecraft-auto-whitelist"
 version = "0.1.0"
-description = "Add your description here"
+description = "A simple bot to auto add to whitelist player"
 readme = "README.md"
 authors = [
     { name = "BuildTools", email = "unconfigured@null.spigotmc.org" }
