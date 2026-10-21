@@ -47,9 +47,11 @@ def get_config() -> EnvDict:
         )
         RCON_PORT = DEFAULT_PORT
 
+    CHANEL_ID = int(__load_var_from_env("CHANEL_ID"))
+
     return EnvDict(
         TOKEN=__load_var_from_env("TOKEN_BOT"),
-        CHANEL_ID=__load_var_from_env("CHANEL_ID"),
+        CHANEL_ID=CHANEL_ID,
         RCON_PORT=RCON_PORT,
         RCON_PWORD=__load_var_from_env("RCON_PWORD"),
         SERVER_URL=__load_var_from_env("SERVER_URL"),
