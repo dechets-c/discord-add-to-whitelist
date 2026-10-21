@@ -1,0 +1,21 @@
+[project]
+name = "minecraft-auto-whitelist"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "BuildTools", email = "unconfigured@null.spigotmc.org" }
+]
+requires-python = ">=3.14"
+dependencies = [
+    "discord>=2.3.2",
+    "mcrcon>=0.7.0",
+    "python-dotenv>=1.2.4",
+]
+
+[project.scripts]
+minecraft-auto-whitelist = "minecraft_auto_whitelist:main"
+
+[build-system]
+requires = ["uv_build>=0.12.3,<0.13.0"]
+build-backend = "uv_build"
