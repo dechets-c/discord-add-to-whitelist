@@ -1,12 +1,12 @@
-from inspobot import fetch_inspirobot_quote
 from logging import getLogger
 
 from discord import Intents, DMChannel
 from discord.ext.commands import Bot
 from discord.message import Message
 
-from .env_dict import EnvDict
-from .minecraft_rcon import add_user_to_whitelist
+from minecraft_auto_whitelist.env_dict import EnvDict
+from minecraft_auto_whitelist.minecraft_rcon import add_user_to_whitelist
+from minecraft_auto_whitelist.inspobot import fetch_inspirobot_quote
 
 logger = getLogger()
 
