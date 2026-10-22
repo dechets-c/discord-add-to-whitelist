@@ -1,6 +1,7 @@
+from inspobot import fetch_inspirobot_quote
 from logging import getLogger
 
-from discord import Intents
+from discord import Intents, DMChannel
 from discord.ext.commands import Bot
 from discord.message import Message
 
@@ -27,9 +28,15 @@ def get_bot(config: EnvDict) -> Bot:
     @bot.event
     async def on_message(message: Message) -> None:
         logger.debug("Message %s received", message.content)
-        if message.author.bot:
-            logger.debug("From bot")
-            return
+        if isinstance(message.channel, DMChannel):
+            if message.author.bot:
+                logger.debug("From bot")
+                return
+            quote_url = await fetch_inspirobot_quote()
+            if quote_url:
+                await message.channel.send(quote_url)
+            else:
+                await message.channel.send("I'm sorry for everything")
 
         if message.channel.id != config["CHANEL_ID"]:
             logger.debug(

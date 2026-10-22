@@ -273,7 +273,7 @@ sdist = { url = "https://files.pythonhosted.org/packages/77/48/6aa55387b45cb8f8c
 
 [[package]]
 name = "minecraft-auto-whitelist"
-version = "0.1.0"
+version = "1.0.0"
 source = { editable = "." }
 dependencies = [
     { name = "discord" },
